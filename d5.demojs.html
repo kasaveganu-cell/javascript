@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+// 1. Write a program that uses a loop to calculate the sum of numbers from 1 to 50.
+    let sum = 0;
+    for (let i = 1; i <= 50; i++) {
+    sum = sum + i;
+    }
+     console.log("Sum of numbers from 1 to 50 is: " + sum);
+
+// 2 .Using a loop,
+//  print the multiplication table of a user given number (e.g., 7) up to 10.
+
+     let num = (+prompt("Enter a number:"));
+        for (let i = 1; i <= 10; i++) {
+        console.log(num + " x " + i + " = " + (num * i));
+       }
+
+    // 3.Using a loop, count how many even numbers exist between 1 and a user given number and display the count.
+
+    let num = prompt("Enter a number:");
+    let count = 0;
+    for (let i = 1; i <= num; i++) {
+    if (i % 2 === 0) {
+        count++;
+    }
+    }
+    console.log("Total even numbers between 1 and " + num + " are: " + count);
+    
+    //4.Using a loop, find the factorial of a user given number (e.g., 6).
+
+    let num = prompt("Enter a number:");
+    let factorial = 1;
+    for (let i = 1; i <= num; i++) {
+    factorial = factorial * i;
+    }
+    console.log("Factorial of " + num + " is: " + factorial);
+
+    //5.Write a program that starts from a user given number (e.g., 20) and counts down to 1, printing each number.
+
+    let num = prompt("Enter a number:");
+    for (let i = num; i >= 1; i--) {
+    console.log(i);
+}
+    </script>
+</body>
+</html>

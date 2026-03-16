@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bank Customer Constructor</title>
+</head>
+<body>
+
+<h2>Bank Customer Interest Details</h2>
+<p id="result"></p>
+
+<script>
+
+    // Constructor Function
+    function BankCustomer(cust_id, cust_name, cust_age, cust_balance) {
+        this.cust_id = cust_id;
+        this.cust_name = cust_name;
+        this.cust_age = cust_age;
+        this.cust_balance = cust_balance;
+
+        // Method to calculate interest
+        this.calculateInterest = function() {
+            let rate;
+
+            if (this.cust_age > 60) {
+                rate = 0.12;
+            }
+            else if (this.cust_age >= 40 && this.cust_age <= 60) {
+                rate = 0.10;
+            }
+            else if (this.cust_age >= 18 && this.cust_age < 40) {
+                rate = 0.08;
+            }
+            else {
+                rate = 0.05;
+            }
+
+            let interest = this.cust_balance * rate;
+
+            return "Customer Name: " + this.cust_name +
+                   "<br>Age: " + this.cust_age +
+                   "<br>Balance: " + this.cust_balance +
+                   "<br>Interest: " + interest +
+                   "<br><br>";
+        }
+    }
+
+    // Creating 5 Objects
+    let c1 = new BankCustomer(1, "Ganu", 22, 50000);
+    let c2 = new BankCustomer(2, "Rahul", 45, 80000);
+    let c3 = new BankCustomer(3, "Amit", 65, 100000);
+    let c4 = new BankCustomer(4, "Sneha", 17, 20000);
+    let c5 = new BankCustomer(5, "Priya", 38, 60000);
+
+    // Display Output
+    document.getElementById("result").innerHTML =
+        c1.calculateInterest() +
+        c2.calculateInterest() +
+        c3.calculateInterest() +
+        c4.calculateInterest() +
+        c5.calculateInterest();
+
+</script>
+
+</body>
+</html>
